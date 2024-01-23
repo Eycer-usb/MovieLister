@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #0c132e;
+    color: #fff;
+    position: sticky;
+    top: 0;
+}
+header h1 {
+    margin: 0;
+    padding: 20px;
+    font-weight: lighter;
+}
+
+header span {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}

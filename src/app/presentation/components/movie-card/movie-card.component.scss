@@ -1,0 +1,33 @@
+img {
+    width: 200px;
+}
+.card {
+    width: 250px;
+    height: 400px;
+    background-color: #35478b;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 5px;
+    display: flex;
+    justify-self: unset;
+    flex-direction: column;
+    align-items: center;
+}
+.card-content {
+    text-align: center;
+}
+
+.card:hover {
+    background-color: #2e3e8b;
+    cursor: pointer;
+}
+
+.card-content p, .card-content h4{
+    margin: 0;
+    line-break: auto;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #999;
+}

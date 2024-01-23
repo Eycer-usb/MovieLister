@@ -1,0 +1,9 @@
+<header>
+    <span class="material-symbols-outlined">
+        trending_up
+    </span>
+    <h1>Popular Movies</h1>
+</header>
+<div appScrollNearEnd (nearEnd)="onNearEndScroll()" class="movie-list">
+    <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+</div>
