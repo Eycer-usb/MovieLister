@@ -5,5 +5,7 @@
     <h1>Popular Movies</h1>
 </header>
 <div appScrollNearEnd (nearEnd)="onNearEndScroll()" class="movie-list">
-    <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+    <app-movie-card *ngFor="let movie of movies" [movie]="movie" (click)="viewMovie(movie.id)"></app-movie-card>
 </div>
+
+<!-- Modal  -->

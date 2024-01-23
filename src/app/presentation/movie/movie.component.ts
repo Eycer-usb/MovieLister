@@ -11,7 +11,7 @@ import { ScrollNearEndDirective } from './scroll.directive';
   imports: [
     CommonModule,
     MovieCardComponent,
-    ScrollNearEndDirective
+    ScrollNearEndDirective,
   ],
   templateUrl: './movie.component.html',
   styleUrl: './movie.component.scss'
@@ -46,6 +46,31 @@ export class MovieComponent implements OnInit{
         }
       }
     )
+  }
+
+  
+  show: boolean = false;
+  selectedMovie: number = 0;
+  movieDetails: MovieDetails = {} as MovieDetails;
+
+  viewMovie(movieId: number): void {
+    if (movieId)
+      this.selectedMovie = movieId;
+      this.viewDetailsUseCase.execute({movieId: this.selectedMovie}).subscribe(
+        {
+          next: (movie: MovieDetails) => {
+            this.movieDetails = movie;
+            this.toggle();
+          },
+          error: (error: any) => {
+            console.log(error);
+          }
+        }
+      );
+  }
+
+  toggle(): void {
+    this.show = !this.show;
   }
 
 }
